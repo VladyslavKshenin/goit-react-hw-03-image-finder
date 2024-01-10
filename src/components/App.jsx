@@ -86,13 +86,15 @@ export default class App extends Component {
         }
       );
     }
-    this.setState({
-      searchQuery: query,
-      page: 1,
-      picturesSet: [],
-      searchMatches: 0,
-      totalHits: 0,
-    });
+    else {
+      this.setState({
+        searchQuery: query,
+        page: 1,
+        picturesSet: [],
+        searchMatches: 0,
+        totalHits: 0,
+      });
+    }
   };
 
   loadMorePictures = () => {
